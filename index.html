@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submissions and Components</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" required v-model="textField" placeholder="Name" />
+    <br>
+    <input for="email" type="email" required v-model="email" placeholder="Email" />
+
+    <div>{{box}}</div>
+    <div>{{box2}}</div>
+    <div v-if="textField.length>=2 && box2 !=='The input needs to be a valid email address.' && email"> Submitted</div>
+    <div v-else-if="!email && !textField"></div>
+    <div v-else>Not Submitted</div>
+    <name v-for="item in list" v-bind:real="item.name" v-bind:code="item.codename">
+
+    </name>
+</div>
+</body>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</html>
